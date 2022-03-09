@@ -5,3 +5,6 @@ const movieData = [
   {title: 'Sunshine'},
   {title: 'Ex Machina'},
 ];
+
+
+export default movieData;

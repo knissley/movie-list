@@ -1,3 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: sans-serif, arial;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(36, 110, 176);
+  color: #f9f9f9;
 }
+
+.app-container {
+  background-color: rgb(27, 70, 108);
+  width: 90%;
+  margin: auto;
+  margin-top: 3rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 50vh;
+}
+
+.header {
+  text-shadow: 2px 2px rgb(36, 110, 176);
+}
+
