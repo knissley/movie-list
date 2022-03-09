@@ -2,8 +2,10 @@ import MovieListEntry from './MovieListEntry.jsx';
 import React from 'react';
 
 
-const MovieList = ({ movies }) => {
-
+const MovieList = ({ getMovies }) => {
+  const movies = getMovies();
+  console.log(getMovies);
+  console.log(getMovies());
 
   return (
   <div className="movie-list">

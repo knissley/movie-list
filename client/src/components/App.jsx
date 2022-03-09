@@ -9,18 +9,23 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      movies: []
+      movies: [],
+      searchQuery: ''
     }
+
+    // this.filterMovieListBySearch.bind(this);
   }
 
-  //functions
 
+  //functions
   handleMovieAddSubmit(movieTitle) {
     const newMovie = {
-      title: movieTitle
+      title: movieTitle,
+      isWatched: false
     }
 
     const allMovies = this.state.movies;
+    //functionality to avoid duplicate movies
     allMovies.push(newMovie);
 
     this.setState({
@@ -30,6 +35,7 @@ class App extends React.Component {
   }
 
   handleMovieSearchSubmit(query) {
+    // watched boolean state in app
     // event.preventDefault();
     let searchQuery = query.toLowerCase();
     const currentMovies = this.state.movies;
@@ -40,10 +46,18 @@ class App extends React.Component {
       matchingMovies.push('No movie by that name found');
     }
     this.setState({
-      movies: matchingMovies
+      searchQuery: query
     });
   }
 
+  filterMovieListBySearch() {
+    const filteredMovies = this.state.movies.filter((movie) => {
+      return movie.title.includes(this.state.searchQuery);
+    })
+    return filteredMovies;
+  }
+
+  //pass state fed through a function to movielist
 
   //render
   render() {
@@ -54,7 +68,7 @@ class App extends React.Component {
         </div>
         <AddMovie handleMovieAddSubmit={this.handleMovieAddSubmit.bind(this)} />
         <Search handleMovieSearchSubmit={this.handleMovieSearchSubmit.bind(this)} />
-        <MovieList movies={this.state.movies} />
+        <MovieList getMovies={this.filterMovieListBySearch.bind(this)} />
       </div>
     );
   }

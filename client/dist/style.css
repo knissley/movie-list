@@ -12,19 +12,53 @@ body {
   color: #f9f9f9;
 }
 
+
 .app-container {
   background-color: rgb(27, 70, 108);
   width: 90%;
+  padding: 3em;
   margin: auto;
   margin-top: 3rem;
   border-radius: 5px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  min-height: 50vh;
+  min-height: 90vh;
 }
 
 .header {
   text-shadow: 2px 2px rgb(36, 110, 176);
 }
 
+.movie-list-entry {
+  width: 100%;
+  border-radius: 5px;
+  padding: 1em;
+  background-color: #d8d8d8;
+  color: #000;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie-list-btn {
+  padding: .5em 1.2em;
+  font-weight: bold;
+  color: white;
+  background-color: grey;
+  outline: none;
+  border-radius: 5px;
+}
+
+.movie-list-btn watched {
+  background-color: green;
+}
+
+.movie-list-entry:not(:last-child) {
+  margin-bottom: .5em;
+}
+
+.movie-list {
+  width: 90%;
+  margin-top: 3em;
+}

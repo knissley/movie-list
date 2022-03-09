@@ -40,11 +40,6 @@ class Search extends React.Component {
           }}>
           <span>Go!</span>
         </button>
-        <button
-         className="reset-btn"
-        >
-          <span>Reset</span>
-        </button>
       </div>
     )
   }
