@@ -23,7 +23,7 @@ class AddMovie extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="add-movie-container">
         <input
           type="text"
           className="add-movie-input"

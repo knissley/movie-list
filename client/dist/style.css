@@ -28,6 +28,7 @@ body {
 
 .header {
   text-shadow: 2px 2px rgb(36, 110, 176);
+  font-size: 4rem;
 }
 
 .movie-list-entry {
@@ -39,6 +40,11 @@ body {
   border: 1px solid black;
   display: flex;
   justify-content: space-between;
+}
+
+.movie-list-entry p {
+  font-size: 1.25rem;
+  letter-spacing: .2;
 }
 
 .movie-list-btn {
@@ -59,6 +65,28 @@ body {
 }
 
 .movie-list {
-  width: 90%;
+  width: 100%;
   margin-top: 3em;
+  border: 2px solid #fff;
+  padding: .75em;
+  border-radius: 5px;
+  background-color: rgb(36, 110, 176);
+}
+
+input {
+  padding: .5em;
+  outline: none;
+  border: 1px solid black;
+  margin-right: .5em;
+  border-radius: 5px;
+}
+
+button {
+  display: inline-block;
+  padding: .3em .75em;
+  font-weight: bold;
+}
+
+.add-movie-container {
+  margin-bottom: .5em;
 }

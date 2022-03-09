@@ -3,14 +3,14 @@ import React from 'react';
 
 
 const MovieList = ({ getMovies }) => {
-  const movies = getMovies();
-  console.log(getMovies);
-  console.log(getMovies());
+  // const movies = getMovies();
+  // console.log(getMovies);
+  // console.log(getMovies());
 
   return (
   <div className="movie-list">
-    {movies.map((movie) =>
-      <MovieListEntry movie={movie} key={movies.indexOf(movie)} />
+    {getMovies().map((movie) =>
+      <MovieListEntry movie={movie} key={getMovies().indexOf(movie)} />
     )}
   </div>
   )
