@@ -52,5 +52,4 @@ class MovieListEntry extends React.Component {
 }
 
 
-
 export default MovieListEntry;
