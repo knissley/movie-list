@@ -53,7 +53,13 @@ class App extends React.Component {
   handleMovieAddSubmit(movieTitle) {
     const newMovie = {
       title: movieTitle,
-      isWatched: false
+      isWatched: false,
+      isSelected: false,
+      releaseYear: 1997,
+      runtime: '58 min',
+      metascore: 90,
+      imdbRating: 7.8,
+      posterUrl: '../data/img/rick-roll.jpeg'
     }
 
     const allMovies = this.state.movies;

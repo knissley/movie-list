@@ -1,4 +1,5 @@
 import React from 'react';
+import MovieEntryDropdown from './MovieEntryDropdown.jsx';
 
 
 // const MovieListEntry = ({ movie }) => (
@@ -20,7 +21,8 @@ class MovieListEntry extends React.Component {
 
     //isWatched is also a property on the movie object itself
     this.state = {
-      isWatched: this.props.movie.isWatched
+      isWatched: this.props.movie.isWatched,
+      isSelected: false
     }
   }
 
@@ -32,6 +34,14 @@ class MovieListEntry extends React.Component {
     console.log(this.props.movie);
   }
 
+  handleEntrySelect() {
+    this.props.movie.isSelected = !this.props.movie.isSelected;
+    this.setState({
+      isSelected: !this.state.isSelected
+    })
+    console.log(this.state.isSelected);
+  }
+
   render() {
 
     let style = {
@@ -39,20 +49,38 @@ class MovieListEntry extends React.Component {
       // color: this.state.isWatched ? 'white' : 'black'
     };
 
+    let selectStyle = {
+      backgroundColor: this.props.movie.isSelected ? 'green' : 'lightgrey'
+    }
+
     // let panelStyle = {
     //   display: this.state.isSelected ? : 'block'
     // }
 
+    let isSelected = this.props.movie.isSelected;
+
+    let panel;
+
+    if (isSelected) {
+      panel = <MovieEntryDropdown movie={this.props.movie} />
+    }
+
     return (
-      <div className="movie-list-entry">
-        <p>{this.props.movie.title}</p>
-        <button
-          className="movie-list-btn"
-          style={style}
-          onClick={this.handleWatchedButtonClick.bind(this)}
-        >
-          <span>Watched</span>
-        </button>
+      <div
+       className="movie-list-entry"
+       onClick={this.handleEntrySelect.bind(this)}
+      >
+        <div className="movie-entry-top" style={selectStyle}>
+          <p>{this.props.movie.title}</p>
+          <button
+            className="movie-list-btn"
+            style={style}
+            onClick={this.handleWatchedButtonClick.bind(this)}
+          >
+            <span>Watched</span>
+          </button>
+        </div>
+        {panel}
       </div>
     )
   }
