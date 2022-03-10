@@ -32,7 +32,7 @@ class MovieListEntry extends React.Component {
   render() {
 
     let style = {
-      backgroundColor: this.state.isWatched ? 'green' : 'grey'
+      backgroundColor: this.props.movie.isWatched ? 'green' : 'grey'
       // color: this.state.isWatched ? 'white' : 'black'
     };
 

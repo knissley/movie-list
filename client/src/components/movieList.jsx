@@ -2,20 +2,6 @@ import MovieListEntry from './MovieListEntry.jsx';
 import React from 'react';
 
 
-// const MovieList = ({ getMovies }) => {
-  //   // const movies = getMovies();
-  //   // console.log(getMovies);
-  //   // console.log(getMovies());
-
-  //   return (
-    //   <div className="movie-list">
-    //     {getMovies().map((movie) =>
-    //       <MovieListEntry movie={movie} key={getMovies().indexOf(movie)} />
-    //     )}
-    //   </div>
-    //   )
-    // };
-
 //refactor to class
 //hold state of the desired view, default to To Watch?
 //when a button is clicked, change the state to the corresponding view
@@ -26,10 +12,10 @@ class MovieList extends React.Component {
   constructor(props) {
     super(props);
 
-    //false view will correspond to unwatched, true will be watched movies
-    this.state = {
-      view: false
-    }
+    // //false view will correspond to unwatched, true will be watched movies
+    // this.state = {
+    //   view: false
+    // }
   }
 
 
