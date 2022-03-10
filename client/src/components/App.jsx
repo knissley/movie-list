@@ -4,6 +4,14 @@ import MovieList from './MovieList.jsx';
 import Search from './Search.jsx';
 import AddMovie from './AddMovie.jsx';
 
+//TODOS:
+/*
+  Disallow duplicate movies in list
+  Fix search to be case insensitive
+  Change the view tabs to be styled based on currently selected view
+
+*/
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -22,7 +30,6 @@ class App extends React.Component {
 
 
   //methods
-
   filterMovieListByOptions() {
     const filteredMovies = this.state.movies.filter((movie) => {
       return (movie.title.includes(this.state.searchQuery) && movie.isWatched === this.state.viewToggle);

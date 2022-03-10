@@ -10,6 +10,9 @@ import React from 'react';
 //   </div>
 // );
 
+//dropdown panel could be a div that by default doesn't show (takes up size of its contents) but does get rendered if the state changes to where the entry is selected??
+
+//always have a filled out dropdown panel but the display is none while the movie isn't selected and changes to block when the movie is clicked
 
 class MovieListEntry extends React.Component {
   constructor(props) {
@@ -35,6 +38,10 @@ class MovieListEntry extends React.Component {
       backgroundColor: this.props.movie.isWatched ? 'green' : 'grey'
       // color: this.state.isWatched ? 'white' : 'black'
     };
+
+    // let panelStyle = {
+    //   display: this.state.isSelected ? : 'block'
+    // }
 
     return (
       <div className="movie-list-entry">
