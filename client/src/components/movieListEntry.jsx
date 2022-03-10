@@ -22,9 +22,11 @@ class MovieListEntry extends React.Component {
   }
 
   handleWatchedButtonClick() {
+    this.props.movie.isWatched = !this.props.movie.isWatched;
     this.setState({
       isWatched: !this.state.isWatched
     })
+    console.log(this.props.movie);
   }
 
   render() {

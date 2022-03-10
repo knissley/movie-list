@@ -90,3 +90,13 @@ button {
 .add-movie-container {
   margin-bottom: .5em;
 }
+
+.movie-list-btn-container {
+  margin-bottom: 1em;
+  border-bottom: 1px solid black;
+  padding-bottom: 1em;
+}
+
+.movie-list-btn-container button {
+  margin-right: .5em;
+}

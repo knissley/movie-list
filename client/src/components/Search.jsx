@@ -38,7 +38,7 @@ class Search extends React.Component {
             e.preventDefault();
             this.handleSearchSubmit(this.state.query);
           }}>
-          <span>Go!</span>
+          <span>Search</span>
         </button>
       </div>
     )
