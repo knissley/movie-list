@@ -28,7 +28,6 @@ class App extends React.Component {
   }
 
 
-
   //methods
   filterMovieListByOptions() {
     const filteredMovies = this.state.movies.filter((movie) => {
@@ -66,6 +65,7 @@ class App extends React.Component {
     //functionality to avoid duplicate movies
     allMovies.push(newMovie);
 
+    //could refactor with spread operator, [...this.state.movies, newMovie]
     this.setState({
       movies: allMovies
     })
@@ -113,13 +113,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-
-{/* <div className="app-container">
-        <div className="nav-bar">
-          <h1 className="header">MovieList</h1>
-        </div>
-        <AddMovie handleMovieAddSubmit={this.handleMovieAddSubmit.bind(this)} />
-        <Search handleMovieSearchSubmit={this.handleMovieSearchSubmit.bind(this)} />
-        <MovieList getMovies={this.filterMovieListBySearch.bind(this)} handleViewChange={this.handleViewChange.bind(this)} />
-      </div> */}
